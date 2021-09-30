@@ -23,8 +23,8 @@ class SUSItem{
   @override
   String toString() {
     return (StringBuffer('SUSItem(')
-          ..write('question: $question ')
-          ..write('answer: $answer ')
+          ..write('question: $question, ')
+          ..write('answer: $answer, ')
           ..write('isPositive: $isPositive ')
           ..write(')'))
         .toString();
