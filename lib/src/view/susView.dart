@@ -30,8 +30,9 @@ class _SUSViewState extends State<SUSView> {
             shrinkWrap: true,
             separatorBuilder: (context, index) => Divider(),
             itemCount: susQuestionnarie.susItems.length,
-            itemBuilder: (context, index) => SUSItemView(missingAnswer: noAns.contains(index),
-                index: index, item: susQuestionnarie.susItems[index]),
+            itemBuilder: (context, index) => SUSItemView(
+                missingAnswer: noAns.contains(index),
+                item: susQuestionnarie.susItems[index]),
           ),
           SizedBox(
             height: 10,
@@ -65,7 +66,7 @@ class _SUSViewState extends State<SUSView> {
                   ),
                 );
               } catch (e) {
-                setState(()=>noAns = (e as AnswerException).notAnswered);
+                setState(() => noAns = (e as AnswerException).notAnswered);
                 showDialog(
                   context: context,
                   builder: (context) => Dialog(

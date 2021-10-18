@@ -5,11 +5,9 @@ class SUSItemView extends StatefulWidget {
   const SUSItemView(
       {Key? key,
       required this.item,
-      required this.index,
       this.missingAnswer = false})
       : super(key: key);
   final SUSItem item;
-  final int index;
   final bool missingAnswer;
 
   @override
@@ -24,7 +22,7 @@ class _SUSItemViewState extends State<SUSItemView> {
       title: RichText(
         text: TextSpan(
           style: DefaultTextStyle.of(context).style,
-          text: '${widget.index + 1}. \t' + widget.item.question.text,
+          text: '${widget.item.index + 1}. \t' + widget.item.question.text,
           children: widget.missingAnswer
               ? [TextSpan(text: '*', style: TextStyle(color: Colors.red, fontSize: 18))]
               : [],
