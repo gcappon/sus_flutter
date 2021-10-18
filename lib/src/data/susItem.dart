@@ -13,10 +13,14 @@ class SUSItem{
   /// A flag that defines if the [SUSItem] [Answer] must be sum or subtracted to the overall score.
   bool isPositive;
   
+  /// The item index in the questionnaire
+  int index;
+
   /// Default constructor of a [SUSItem].
   SUSItem({required this.question,
     this.answer,
     required this.isPositive,
+    required this.index,
   });
 
   /// Returns the status of a [SUSItem].
